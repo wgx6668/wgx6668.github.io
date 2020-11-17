@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+			}
+			#wei img{
+				width: 200px;
+				height: 300px;
+				margin: 10px;
+			}
+			#go{
+				position: relative;
+				right: -100px;
+			}
+			.ur{
+				position: relative;
+				right: -100px;
+			}
+			p{
+				width: 220px;
+				text-align: center;
+				font-weight: bold;
+				display: inline-block;
+				color:white;
+			}
+			#waer img{
+				width: 300px;
+				height: 400px;
+			}
+			#outer
+			{
+				/* width: 300px; */
+				height: 400px;
+				padding: 10px;
+				/* margin: 50px 0 0 0; */
+				/* background-color: #1C1D1F; */
+				background-image: url(../img/ZNo.1.png);
+				/* overflow: hidden; */
+			}
+			#waer{
+				/* width:0; */
+				list-style: none;
+				/* float: left; */
+				position:relative;
+				/* left:0; */
+			}
+			li{
+				margin:0 30px 0 0;;
+				float: left;
+			}
+			#divuu{
+				/* position: absolute; */
+				position: relative;
+				/* text-align: center; */
+				right: -90px;
+				top: -20px;
+			}
+				
+			#divuu a{
+				float:left;
+				width: 15px;
+				height: 15px;
+				background-color: #1C1D1F;
+				margin: 0 5px;
+				opacity: 0.3;
+				/* text-align: center; */
+			}
+			#uu1{
+				position: relative;
+				right: -200px;
+				top: -80px; 
+			}
+			#uu1 a{
+				text-decoration: none;
+				color: black
+			}
+			#uu2{
+				position: relative;
+				right: -100px;
+				bottom: -35px;
+			}
+			#uu2 a{
+				font-size:20px;
+				color:white;
+				margin: 15px;
+				text-decoration: none;
+			}
+			#uu3{
+				/* display: inline-block; */
+				position: relative;
+				/* right: -10px; */
+				margin:100px;
+			}
+			#uu4{
+				position: relative;
+				right: -400px;
+			}
+			#uu1 div{
+				display: inline-block;
+			}
+			#uu3 div{
+				margin: 0 10px;
+			}
+			#uu4 div{
+				margin: 0 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var waer=document.getElementById("waer");
+			    var a=document.getElementsByTagName("li");
+				waer.style.width=(a.length*330)+"px";
+				// var b=a.length;
+				var b=0;
+				setInterval(function(){
+					// waer.style.left=(-330*(a.length-b))+"px";
+					waer.style.left=(-660-1*b)+"px";
+					b++;
+					// b--;
+					// if(b==0)
+					// {
+					// 	b=a.length;
+					// }
+					if(b==330*(a.length-7))
+					{
+						b=0;
+					}
+				}
+				,10)
+			}
+		</script>
+		<div id="uu1" style="height: 60px;">
+			<div>
+			<a href="https://manga.bilibili.com/?from=manga_homepage" target="_blank"><img src="../img/b1.png" style="height: 50px; position: relative; top:20px; right:20px;">哔哩哔哩漫画</a>
+			</div>
+			<div id="uu3">
+			<div><a href="https://manga.bilibili.com/?from=manga_homepage" target="_blank"><img src="../img/b2.ico" style="height: 16px;">主站</a></div>
+			<div><a href="https://manga.bilibili.com/?from=manga_homepage" target="_blank">首页</a></div>
+			<div><a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=-1&areas=-1&status=-1&prices=-1&orders=0" target="_blank">分类</a></div>
+			<div><a href="https://manga.bilibili.com/ranking/ninnki?from=manga_homepage" target="_blank">排行榜</a></div>
+			<div><a href="https://manga.bilibili.com/updates" target="_blank">更新</a></div>
+			</div>
+			<div id="uu4"><div><a href="https://manga.bilibili.com/app-download" target="_blank">下载APP</a></div>
+			<div><a href="">登录</a></div>
+			<div><a href="https://passport.bilibili.com/register/phone.html#/phone" target="_blank">注册</a></div>
+			</div>
+		</div>
+		<div id="outer">
+			<ul id="waer">
+				<li><a href="https://manga.bilibili.com/detail/mc27915" target="_blank"><img src="../img/4.jpg" /></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc28565" target="_blank"><img src="../img/5.jpg"></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc27743" target="_blank"><img src="../img/1.jpg"></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc27794?from=manga_index" target="_blank"><img src="../img/p3.jpg"></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc26769?from=manga_serach" target="_blank"><img src="../img/6.jpg" /></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc27927?from=manga_index" target="_blank"><img src="../img/p1.jpg" /></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc27970?from=manga_index" target="_blank"><img src="../img/p2.jpg"></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc27743" target="_blank"><img src="../img/1.jpg"></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc27794?from=manga_index" target="_blank"><img src="../img/p3.jpg"></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc26769?from=manga_serach" target="_blank"><img src="../img/6.jpg" /></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc27927?from=manga_index" target="_blank"><img src="../img/p1.jpg" /></a></li>
+				<li><a href="https://manga.bilibili.com/detail/mc27970?from=manga_index" target="_blank"><img src="../img/p2.jpg"></a></li>
+			</ul>
+		</div>
+		<div style="background-image: url(../img/背景2.png);">
+		<div style="height: 100px;">
+			<div id="uu2">
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=1028&areas=-1&status=-1&prices=-1&orders=0" target="_blank">正能量</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=1013&areas=-1&status=-1&prices=-1&orders=0" target="_blank">冒险</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=999&areas=-1&status=-1&prices=-1&orders=0" target="_blank">热血</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=994&areas=-1&status=-1&prices=-1&orders=0" target="_blank">搞笑</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=995&areas=-1&status=-1&prices=-1&orders=0" target="_blank">恋爱</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=1026&areas=-1&status=-1&prices=-1&orders=0" target="_blank">少女</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=1022&areas=-1&status=-1&prices=-1&orders=0" target="_blank">纯爱</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=1020&areas=-1&status=-1&prices=-1&orders=0" target="_blank">日常</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=1001&areas=-1&status=-1&prices=-1&orders=0" target="_blank">校园</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=1010&areas=-1&status=-1&prices=-1&orders=0" target="_blank">运动</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=1007&areas=-1&status=-1&prices=-1&orders=0" target="_blank">治愈</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=1006&areas=-1&status=-1&prices=-1&orders=0" target="_blank">橘味</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=997&areas=-1&status=-1&prices=-1&orders=0" target="_blank">古风</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=1016&areas=-1&status=-1&prices=-1&orders=0" target="_blank">玄幻</a>
+				<a href="https://manga.bilibili.com/classify#/?from=manga_homepage&styles=-1&areas=-1&status=-1&prices=-1&orders=0" target="_blank">全部></a>
+			</div>
+		</div>
+		<h1 align="center">为你推荐</h1>
+		<div id="wei">
+			<div id="go">
+			<a href="https://manga.bilibili.com/detail/mc27847" target="_blank"><img src="../img/1.jpg"></a>
+			<a href="https://manga.bilibili.com/detail/mc28294" target="_blank"><img src="../img/2.jpg"></a>
+			<a href="https://manga.bilibili.com/detail/mc27817" target="_blank"><img src="../img/3.jpg" /></a>
+			<a href="https://manga.bilibili.com/detail/mc27915" target="_blank"><img src="../img/4.jpg" /></a>
+			<a href="https://manga.bilibili.com/detail/mc28565" target="_blank"><img src="../img/5.jpg"></a>
+			<a href="https://manga.bilibili.com/detail/mc26769" target="_blank"><img src="../img/6.jpg" /></a>
+			</div>
+			<div class="ur">
+				 <p><a style="color: beige;text-decoration: none;" href="https://manga.bilibili.com/detail/mc27847" target="_blank">本剑仙绝不吃软饭</a></p>
+				 <p><a >到了30岁还是童贞</a></p>
+				 <p><a >百练成神</a></p>
+				 <p><a >我独自盗墓</a></p>
+				 <p><a>无能的奈奈</a></p>
+				 <p><a>天宫赐福</a></p>
+			</div>
+			
+			<div id="go">
+			<a href="https://manga.bilibili.com/detail/mc27743" target="_blank"><img src="../img/a1.jpg"></a>
+			<a href="https://manga.bilibili.com/detail/mc28956" target="_blank"><img src="../img/a2.jpg"></a>
+			<a href="https://manga.bilibili.com/detail/mc28241" target="_blank"><img src="../img/a3.jpg" /></a>
+			<a href="https://manga.bilibili.com/detail/mc28062" target="_blank"><img src="../img/a4.jpg" /></a>
+			<a href="https://manga.bilibili.com/detail/mc25506" target="_blank"><img src="../img/a5.jpg"></a>
+			<a href="https://manga.bilibili.com/detail/mc26505" target="_blank"><img src="../img/a6.jpg" /></a>
+			</div>
+			<div class="ur">
+				 <p><a>脆弱关系</a></p>
+				 <p><a>逐火战记</a></p>
+				 <p><a>骷髅骑士没能守住副本</a></p>
+				 <p><a>我的人气肯定出现了</a></p>
+				 <p><a>我家大师兄脑子有坑</a></p>
+				 <p><a>咒术回战</a></p>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
