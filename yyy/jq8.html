@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.tt{
+			position: relative;
+			margin: 100px auto;
+			width: 400px;
+			height: 600px;
+			border: #0000FF 1px solid;
+		}
+		.one{
+			width: 100%;
+			height:100%;
+		}
+		.ur{
+			position: absolute;
+			bottom: 160px;
+			/* left: auto; */
+			left: 100px;
+			width: 200px;
+			height: 38px;
+			border-radius:20px;
+			background: #FF0000;
+		}
+		.ttt{
+			position: absolute;
+			left: 80px;
+			top: 84px;
+			width: 223px;
+			height: 18px;
+		}
+		.aa{
+			position: absolute;
+			/* width: ; */
+			bottom: 0;
+			text-align: center;
+			background: #A9A9A9;
+			width: 100%;
+		}
+		.zz{
+			/* margin-left: -; */
+			position: absolute;
+			left: 70px;
+			top: -10px;
+			color: white;
+			font-size: 60px;
+			/* border: #0000FF 2px solid; */
+		}
+		.guizhe{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color:rgba(0,0,0,0.5);
+			/* padding-top:300px ; */
+			text-align: center;
+			display: none;
+		}
+		.ggg{
+			padding-top:100px;
+			
+		}
+		.ggg>p{
+			/* padding-top: 50px; */
+			line-height: 50px;
+			color: white;
+		}
+		.ggg>a{
+			color: red;
+		}
+		.ccc{
+			text-align: center;
+			background-color:rgba(0,0,0,0.5);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top:0;
+			left:0;
+			display: none;
+		}
+		.ccc>p{
+			padding-top: 200px;
+			text-align: center;
+			font-size: 50px;
+			line-height: 200px;
+			text-shadow: #FF1493 1px 1px 10px;
+		}
+		.ccc>button{
+			/* text-align: center; */
+			/* text-indent: 20px; */
+		/* 	position: relative;
+			right: -50px; */
+			line-height: 20px;
+			border-radius: 20px;
+			width: 300px;
+			height: 30px;
+			background: lightcyan;
+		}
+		.weizi{
+			/* border: 1px solid saddlebrown; */
+			position: absolute;
+			left:50px;
+			top:389px
+		}
+	</style>
+	<script src="one.js"></script>
+	<script>
+	$(function(){
+		$(".aa").click(function(){
+			$(".guizhe").show();
+		})
+		$(".ggg>a").click(function(){
+			$(".guizhe").hide();
+		})
+		$(".ccc>button").click(function(){
+			$(".ccc").hide();
+			$(".ur").show();
+			$(".ttt").css({
+				width:223
+			})
+		})
+		$(".ur").click(function(){
+			$(this).fadeOut(500);
+			timer();
+			goto();
+		})
+		function timer()
+		{
+			var time=setInterval(function(){
+				var width=$(".ttt").width();
+				width-=1;
+				$(".ttt").css({
+					width:width
+				})
+				if(width<=0)
+				{
+					clearInterval(time);
+					$(".ccc").stop().show();
+					ttop();
+					$(".zz").text(0);
+				}
+			},100)
+		}
+		var wolftime;
+		function goto()
+		{
+			// alert("13");
+			var wolf_1=[
+				'11/h0.png',
+				'11/h1.png',
+				'11/h2.png',
+				'11/h3.png',
+				'11/h4.png',
+				'11/h5.png',
+				'11/h6.png',
+				'11/h7.png',
+				'11/h8.png',
+				'11/h9.png'
+			];
+			var wolf_2=[
+				'11/x0.png',
+				'11/x1.png',
+				'11/x2.png',
+				'11/x3.png',
+				'11/x4.png',
+				'11/x5.png',
+				'11/x6.png',
+				'11/x7.png',
+				'11/x8.png',
+				'11/x9.png'
+			];
+			var arrPos = [
+			    { left: "136px", top: "160px" },
+			    { left: "40px", top: "220px" },
+			    { left: "240px", top: "200px" },
+			    { left: "138px", top: "260px" },
+			    { left: "30px", top: "300px" },
+			    { left: "202px", top: "312px" },
+			    { left: "268px", top: "389px" },
+			    { left: "160px", top: "360px" },
+			    { left: "50px", top: "389px" },
+			             ];
+		var $wolfimage=$("<img src='' class='wolfimage'>");
+		var index=Math.round(Math.random()*8);
+		$wolfimage.css({
+			position:"absolute",
+			left:arrPos[index].left,
+			top:arrPos[index].top
+		})
+		var wolftype=Math.round(Math.random())==0?wolf_1:wolf_2;
+		// var inndex=0;
+		window.inndex=0
+		window.inndexend=5
+		wolftime=setInterval(function(){
+			$wolfimage.attr("src",wolftype[inndex])
+			inndex=inndex+1;
+			$(".tt").append($wolfimage)
+			if(inndex>inndexend)
+			{
+				clearInterval(wolftime);
+				$wolfimage.remove();
+				goto()
+			}
+		},300)
+		rule($wolfimage);
+		}
+		function rule($wolfimage)
+		{
+			$wolfimage.one("click",function()
+			{
+				// alert("123")
+					inndex=5;
+					inndexend=9;
+				var $src=$(this).attr("src");
+				console.log($src);
+				var pd=$src.indexOf("h")>=0
+				if(pd)
+				{
+					$(".zz").text(parseInt($(".zz").text())+10)
+				}
+				else
+				{
+					$(".zz").text(parseInt($(".zz").text())-10)
+				}
+			})
+		}
+		function ttop()
+		{
+			// $(".tt").children("input:last-child").remove();
+			$(".wolfimage").remove();
+			// $("img").last().remove();
+			clearInterval(wolftime);
+		}
+	})
+	</script>
+	<body>
+		<div class="tt">
+		<img src="11/progress.png" class="ttt" />
+		<img src="11/game_bg.jpg" class="one" />
+		<button class="ur">开始游戏</button>
+		<div class="zz">0</div>
+		<div class="aa">游戏规则</div>
+		<div class="guizhe">
+			<div class="ggg">
+			<p>游戏规则:</p>
+			<p>1.游戏时间:60s</p>
+			<p>2.拼手速殴打罗一乐+10分</p>
+			<p>3.殴打小灰灰-10分</p>
+			<a href="#">[关闭]</a>
+			</div>
+		</div>
+		<div class="ccc">
+			<p>GAME OVER</p>
+			<button>重新开始</button>
+		</div>
+		<!-- <div class="weizi"><img src="11/h0.png"></div> -->
+		</div>
+	</body>
+</html>
